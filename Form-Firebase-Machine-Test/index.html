@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5">
+      <h3 class="text-center mb-4">Registration Form</h3>
+      <div class="card p-4" style="background-color: #c0bebe;">
+        <form id="healthForm">
+          <div class="form-group">
+            <label for="firstname">First Name</label>
+            <input type="text" class="form-control" id="fname" name="firstname" placeholder="First Name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" class="form-control" id="lname" name="lastname" placeholder="Last Name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="abc@gmail.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="weight">Weight (kg)</label>
+            <input type="number" class="form-control" id="weight" name="weight" placeholder="Enter weight in kgs" required>
+          </div>
+
+          <div class="form-group">
+            <label for="height">Height (cm)</label>
+            <input type="number" class="form-control" id="height" name="height" placeholder="Enter height in cms" required>
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label><br>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Require Trainer</label><br>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="trainer" id="yes" value="yes" required>
+              <label class="form-check-label" for="yes">Yes</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="trainer" id="no" value="no" required>
+              <label class="form-check-label" for="no">No</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="package">Select Package</label>
+            <select class="form-control" id="package" name="package" required>
+              <option value="" disabled selected>Choose</option>
+              <option value="monthly">Monthly</option>
+              <option value="quarterly">Quarterly</option>
+              <option value="yearly">Yearly</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="importance">What Is Important to You?</label>
+            <select class="form-control" id="importance" name="importance" required>
+              <option value="" disabled selected>Choose</option>
+              <option value="Get Fit">Get Fit</option>
+              <option value="Gain Muscle">Gain Muscle</option>
+              <option value="Weight Loss">Weight Loss</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="entryDate">Entry Date</label>
+            <input type="date" class="form-control" id="entryDate" name="entryDate" required>
+          </div>
+
+          <button id="submitBtn" type="submit" class="btn btn-outline-primary">Register</button>
+          <button id="resetBtn" type="reset" class="btn btn-outline-success ml-2">Reset</button>
+          <button id="updateBtn" type="button" class="btn btn-outline-primary ml-2 d-none">Update Data</button>
+
+        </form>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+            <table class="table table-bordered mt-4">
+                <thead class="thead-dark">
+                    <tr>
+                    <th>Sr.No</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Weight (kg)</th>
+                    <th>Height (cm)</th>
+                    <th>Gender</th>
+                    <th>Trainer</th>
+                    <th>Package</th>
+                    <th>Importance</th>
+                    <th>Entry Date</th>
+                    <th>Edit</th>
+                    <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="dataTable">
+                    <!-- Form data will be inserted here dynamically -->
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Rohan</td>
+                        <td>Panchal</td>
+                        <td>rohanpanchal@gmail.com</td>
+                        <td>72</td>
+                        <td>178</td>
+                        <td>Male</td>
+                        <td>Yes</td>
+                        <td>Monthly</td>
+                        <td>Gain Muscle</td>
+                        <td>2025-05-26</td>
+                    </tr> -->
+                </tbody>
+            </table>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/app.js"></script>
+
+</body>
+</html>
